@@ -1,0 +1,112 @@
+@use 'mixins' as m;
+
+
+* {
+    box-sizing: border-box;
+    color: var(--color-light);
+    outline: 1px solid red;    
+
+}
+
+main {
+    // overflow-x: hidden;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+
+}
+
+.visually-hidden {
+    display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+li {
+    list-style: none;
+}
+
+figure,
+blockquote {
+    margin: 0;
+}
+
+hr {
+    margin: 0;
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    max-width: 1140px;
+}
+
+.button {
+    width: 290px;
+    height: 60px;
+    background-color: var(--color-orange);
+    border: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+
+    &:hover {
+        opacity: .9;
+        color: #d6d3d3;
+    }
+
+    @include m.mobile {
+        width: 220px;
+        font-size: 12px;
+        font-weight: 500;
+        height: 40px;
+    }
+}
+
+.button-span {
+    display: flex;
+    justify-content: center;
+    
+    &::after {
+        content: '';
+        width: 6px;
+        height: 10px;
+        background: url('../images/arrow.svg') center / cover no-repeat;
+        margin: 4px 0 0 10px;
+    }
+}

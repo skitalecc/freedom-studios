@@ -1,0 +1,24 @@
+@use 'mixins' as m;
+
+.header {
+    height: 60px;
+    max-width: 100%;
+    overflow-y: hidden;
+
+     @include m.desktop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__link {
+        margin-top: 30px;
+        display: inline-block;
+    }
+
+    &__img {
+        width: 145px;
+        height: 30px;
+        object-fit: cover;
+    }
+}

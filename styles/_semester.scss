@@ -1,0 +1,64 @@
+@use 'mixins' as m;
+
+.semester {
+    background: url('../images/last-bc.webp') center / cover no-repeat;
+    
+    padding: 80px 350px;
+    // overflow-x: hidden;
+    // display: flex;
+    // justify-content: center;
+
+    @include m.mobile {
+        padding: 60px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        row-gap: 19px;
+
+        @include m.mobile {
+            margin: 60px auto;
+        }
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    &__title {
+        font-size: 64px;
+        font-weight: 700;
+
+        @include m.mobile {
+            font-size: 52px;
+        }
+    }
+
+    &__desc {
+        font-size: 24px;
+        font-weight: 400;
+        max-width: 750px;
+
+        @include m.mobile {
+            font-size: 19px;
+        }
+    }
+
+    &__button {
+        margin-top: 10px;
+    }
+
+}
+
+.socials__list-img {
+    width: 30px;
+    aspect-ratio: 1;
+}

@@ -1,0 +1,89 @@
+@use 'mixins' as m;
+
+
+.facilities {
+    background-color: var(--color-grey);
+    padding: 120px 0px;
+
+    &-wrapper {
+        display: flex;
+        column-gap: 120px;
+
+        @include m.tablet {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            column-gap: 60px;
+        }
+    }
+
+    &__img {
+        max-width: 540px;
+        height: 380px;
+
+        @include m.mobile {
+            max-width: 540px;
+            height: 320px;
+            object-fit: cover;
+        }
+
+        @include m.mobile-s {
+            max-width: 340px;
+            height: 240px;
+            object-fit: cover;
+        }
+
+    }   
+
+    &-body {
+        padding: 45px 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+
+        @include m.tablet {
+            align-items: center;
+            text-align: center;
+            row-gap: 20px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        font-weight: 700;
+
+
+    }
+
+    &__title {
+        max-width: 400px;
+        font-size: 36px;
+        font-weight: 700;
+
+
+    }
+
+    &__list {
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 400;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+
+
+        &-item {
+            display: flex;
+            column-gap: 10px;
+
+            &::before {
+                content: '';
+                width: 25px;
+                height: 25px;
+                background: url('../images/daw.svg') center/ cover no-repeat;
+                margin-bottom: 4px;
+            }
+        }
+    }
+}
